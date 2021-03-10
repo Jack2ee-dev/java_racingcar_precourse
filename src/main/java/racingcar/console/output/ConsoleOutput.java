@@ -47,6 +47,10 @@ public class ConsoleOutput {
         }
     }
 
+    public static void printError(String error) {
+        println(error);
+    }
+
     public static void printWinners(String[] winners) {
         String winnersConcatenated = String.join(Rule.getWinnerConcatDelimiter(), winners);
         println("최종 우승자: " + winnersConcatenated);
