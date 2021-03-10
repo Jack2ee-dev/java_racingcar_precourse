@@ -1,0 +1,20 @@
+package racingcar.controller.racing;
+
+import java.util.Scanner;
+
+public class Racing {
+
+    private final RacingComponent racingComponent;
+
+    public Racing(Scanner scanner) {
+        this.racingComponent = new RacingComponent(scanner);
+    }
+
+    public void start() {
+        this.racingComponent.getCarNames();
+        this.racingComponent.getTrial();
+        this.racingComponent.printResult();
+        this.racingComponent.turns();
+        this.racingComponent.showWinners();
+    }
+}
