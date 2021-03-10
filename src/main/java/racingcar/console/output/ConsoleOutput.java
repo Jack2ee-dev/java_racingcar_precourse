@@ -36,15 +36,8 @@ public class ConsoleOutput {
         println(ENTER_TRIAL_SENTENCE);
     }
 
-    public void printProgresses() {
+    public void printResult() {
         println(RESULT_SENTENCE);
-        for (Car car : CarRepository.cars()) {
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < car.getPosition(); i++) {
-                sb.append(Rule.getProgressBar());
-            }
-            printProgress(car.getName(), sb.toString());
-        }
     }
 
     public void printError(String error) {
@@ -56,7 +49,11 @@ public class ConsoleOutput {
         println("최종 우승자: " + winnersConcatenated);
     }
 
-    private static void printProgress(String carName, String progresses) {
-        println(carName + " : " + progresses);
+    public void printProgress(String carName, int position) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < position; i++) {
+            sb.append(Rule.getProgressBar());
+        }
+        println(carName + " : " + sb.toString());
     }
 }

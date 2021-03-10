@@ -16,4 +16,8 @@ public class Car {
     public int getPosition() {
         return this.position;
     }
+
+    public void progress() {
+        this.position += 1;
+    }
 }

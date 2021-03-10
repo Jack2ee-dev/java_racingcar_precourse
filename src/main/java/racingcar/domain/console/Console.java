@@ -41,4 +41,12 @@ public class Console {
             }
         }
     }
+
+    public void printProgress(String carName, int progress) {
+        this.output.printProgress(carName, progress);
+    }
+
+    public void printWinners(String[] winners) {
+        this.output.printWinners(winners);
+    }
 }
