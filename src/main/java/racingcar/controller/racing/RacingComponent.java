@@ -1,10 +1,10 @@
-package racingcar.domain.racingComponent;
+package racingcar.controller.racing;
 
 import java.util.Scanner;
 
 import racingcar.domain.car.Car;
 import racingcar.domain.car.CarRepository;
-import racingcar.domain.console.Console;
+import racingcar.controller.console.Console;
 import racingcar.domain.rule.Rule;
 
 public class RacingComponent {

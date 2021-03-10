@@ -2,8 +2,6 @@ package racingcar.controller.racing;
 
 import java.util.Scanner;
 
-import racingcar.domain.racingComponent.RacingComponent;
-
 public class Racing {
 
     private final RacingComponent racingComponent;

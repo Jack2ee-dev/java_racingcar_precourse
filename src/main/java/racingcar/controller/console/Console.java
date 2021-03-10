@@ -1,4 +1,4 @@
-package racingcar.domain.console;
+package racingcar.controller.console;
 
 import java.util.Scanner;
 
