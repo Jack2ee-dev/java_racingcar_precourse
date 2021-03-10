@@ -5,9 +5,9 @@ import racingcar.domain.rule.Rule;
 public class NoCarInputException extends ConsoleInputException {
 
     private static final String NO_CAR_INPUT_EXCEPTION = "경주할 자동차 이름을 입력해야 합니다.(이름은 " +
-        Rule.CAR_NAME_DELIMITER.get("DELIMITER_KOR") +
+        Rule.getDelimiter() +
         "(" +
-        Rule.CAR_NAME_DELIMITER.get("DELIMITER") +
+        Rule.getDelimiterKor() +
         ")" +
         " 기준으로 구분)";
 
