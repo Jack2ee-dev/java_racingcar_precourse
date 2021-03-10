@@ -10,4 +10,8 @@ public class CarRepository {
     public static List<Car> cars() {
         return Collections.unmodifiableList(cars);
     }
+
+    public static void add(String carName) {
+        cars.add(new Car(carName));
+    }
 }
