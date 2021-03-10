@@ -4,20 +4,20 @@ import racingcar.domain.rule.Rule;
 
 public class ConsoleInputUtils {
 
-    public String[] carNamesArray(String carNames) {
+    public static String[] carNamesArray(String carNames) {
         String sanitized = sanitize(carNames);
         return split(sanitized);
     }
 
-    public int trialNumber(String trial) {
+    public static int trialNumber(String trial) {
         return Integer.parseInt(trial);
     }
 
-    private String[] split(String input) {
+    private static String[] split(String input) {
         return input.split(Rule.getDelimiter());
     }
 
-    private String sanitize(String input) {
+    private static String sanitize(String input) {
         String sanitized = input;
         sanitized = sanitizeWhiteSpace(sanitized);
         sanitized = sanitizeFirstRest(sanitized);
@@ -25,15 +25,15 @@ public class ConsoleInputUtils {
         return sanitized;
     }
 
-    private String sanitizeWhiteSpace(String input) {
+    private static String sanitizeWhiteSpace(String input) {
         return input.replaceAll("\\s+", "");
     }
 
-    private String sanitizeFirstRest(String input) {
+    private static String sanitizeFirstRest(String input) {
         return input.replaceAll("^,", "");
     }
 
-    private String sanitizeLastRest(String input) {
+    private static String sanitizeLastRest(String input) {
         return input.replaceAll(",$", "");
     }
 }

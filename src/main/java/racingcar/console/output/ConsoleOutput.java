@@ -16,7 +16,7 @@ public class ConsoleOutput {
 
     }
 
-    public ConsoleOutput init() {
+    public static ConsoleOutput init() {
         return new ConsoleOutput();
     }
 
@@ -28,15 +28,15 @@ public class ConsoleOutput {
         System.out.println(message);
     }
 
-    public static void printEnterCarNameSentence() {
+    public void printEnterCarNameSentence() {
         println(ENTER_CAR_NAMES_SENTENCE);
     }
 
-    public static void printEnterTrialSentence() {
+    public void printEnterTrialSentence() {
         println(ENTER_TRIAL_SENTENCE);
     }
 
-    public static void printProgresses() {
+    public void printProgresses() {
         println(RESULT_SENTENCE);
         for (Car car : CarRepository.cars()) {
             StringBuilder sb = new StringBuilder();
@@ -47,11 +47,11 @@ public class ConsoleOutput {
         }
     }
 
-    public static void printError(String error) {
+    public void printError(String error) {
         println(error);
     }
 
-    public static void printWinners(String[] winners) {
+    public void printWinners(String[] winners) {
         String winnersConcatenated = String.join(Rule.getWinnerConcatDelimiter(), winners);
         println("최종 우승자: " + winnersConcatenated);
     }

@@ -6,13 +6,17 @@ import racingcar.domain.rule.Rule;
 
 public class ConsoleInputValidationUtils {
 
-    public void validateCarNames(String carNamesInput) throws NoCarInputException {
+    private ConsoleInputValidationUtils() {
+
+    }
+
+    public static void validateCarNames(String carNamesInput) throws NoCarInputException {
         if (carNamesInput.equals("") || carNamesInput.length() == 0) {
             throw new NoCarInputException();
         }
     }
 
-    public void validateTrial(String trial) throws NotParsableToIntException {
+    public static void validateTrial(String trial) throws NotParsableToIntException {
         try {
             Integer.parseInt(trial);
         } catch (NumberFormatException e) {
