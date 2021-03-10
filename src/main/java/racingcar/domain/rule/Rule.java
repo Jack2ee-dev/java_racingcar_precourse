@@ -24,7 +24,7 @@ public class Rule {
     }
 
     public static String getDelimiterSentence() {
-        return "이름은 " +
+        return "(이름은 " +
             CAR_NAME_DELIMITER.get(DELIMITER_KOR) +
             "(" +
             CAR_NAME_DELIMITER.get(DELIMITER) +
