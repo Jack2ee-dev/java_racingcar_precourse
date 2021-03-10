@@ -31,6 +31,11 @@ public class RacingComponent {
             }
             this.console.printProgress(car.getName(), car.getPosition());
         }
+        System.out.println();
+    }
+
+    public void printResult() {
+        this.console.printResult();
     }
 
     public void turns() {
@@ -41,6 +46,5 @@ public class RacingComponent {
 
     public void showWinners() {
         this.console.printWinners(CarRepository.getWinnerNames());
-
     }
 }

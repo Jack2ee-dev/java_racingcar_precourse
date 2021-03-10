@@ -15,6 +15,7 @@ public class Racing {
     public void start() {
         this.racingComponent.getCarNames();
         this.racingComponent.getTrial();
+        this.racingComponent.printResult();
         this.racingComponent.turns();
         this.racingComponent.showWinners();
     }

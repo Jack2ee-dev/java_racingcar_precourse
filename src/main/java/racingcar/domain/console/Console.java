@@ -20,6 +20,7 @@ public class Console {
 
     public String[] getCarNamesArray() {
         while (true) {
+            output.printEnterCarNameSentence();
             String rawCarNames = this.input.getCarNamesInput();
             try {
                 ConsoleInputValidationUtils.validateCarNames(rawCarNames);
@@ -32,6 +33,7 @@ public class Console {
 
     public int getTrialNumber() {
         while (true) {
+            output.printEnterTrialSentence();
             String rawTrialNumber = this.input.getTrialInput();
             try {
                 ConsoleInputValidationUtils.validateTrial(rawTrialNumber);
@@ -48,5 +50,9 @@ public class Console {
 
     public void printWinners(String[] winners) {
         this.output.printWinners(winners);
+    }
+
+    public void printResult() {
+        this.output.printResult();
     }
 }
